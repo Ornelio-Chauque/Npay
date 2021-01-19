@@ -32,6 +32,30 @@ public class Request {
 		this.transactionType=transactionType;
 	}
 	
+	protected TransactionType getTransactionType() {
+		return this.transactionType;
+	}
+	
+	public String getTransactionId() {
+		return transactionId;
+	}
+
+	public String getAmount() {
+		return amount;
+	}
+
+	public String getBusinessProductId() {
+		return businessProductId;
+	}
+
+	public String getSenderAccount() {
+		return senderAccount;
+	}
+
+	public String getReceiverAccount() {
+		return receiverAccount;
+	}
+
 	public static class Builder{
 	
 		String transactionId;
@@ -42,7 +66,7 @@ public class Request {
 		TransactionType transactionType;
 		
 		
-		public Builder transationType(TransactionType transactionType) {
+		public Builder transactionType(TransactionType transactionType) {
 			this.transactionType=transactionType;
 			return this;
 		}
